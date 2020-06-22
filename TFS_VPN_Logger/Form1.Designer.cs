@@ -34,9 +34,11 @@
             this.labeluser = new System.Windows.Forms.Label();
             this.iconuser = new FontAwesome.Sharp.IconPictureBox();
             this.labelAppheading = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelmenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconuser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelmenu
@@ -64,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.labeluser);
             this.panel1.Controls.Add(this.iconuser);
             this.panel1.Controls.Add(this.labelAppheading);
@@ -102,14 +105,24 @@
             // labelAppheading
             // 
             this.labelAppheading.AutoSize = true;
-            this.labelAppheading.Font = new System.Drawing.Font("Exo", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAppheading.Font = new System.Drawing.Font("Exo", 26F, System.Drawing.FontStyle.Bold);
             this.labelAppheading.ForeColor = System.Drawing.Color.White;
-            this.labelAppheading.Location = new System.Drawing.Point(12, 30);
+            this.labelAppheading.Location = new System.Drawing.Point(139, 29);
             this.labelAppheading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAppheading.Name = "labelAppheading";
-            this.labelAppheading.Size = new System.Drawing.Size(585, 56);
+            this.labelAppheading.Size = new System.Drawing.Size(518, 49);
             this.labelAppheading.TabIndex = 2;
             this.labelAppheading.Text = "TFSCZ/SK VPN Administration";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TFS_VPN_Logger.Properties.Resources.unnamed;
+            this.pictureBox1.Location = new System.Drawing.Point(3, -20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 156);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -128,6 +141,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconuser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -140,6 +154,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labeluser;
         private FontAwesome.Sharp.IconPictureBox iconuser;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
