@@ -91,10 +91,10 @@
             // 
             // buttonAmbica
             // 
-            this.buttonAmbica.BackColor = System.Drawing.Color.Tomato;
+            this.buttonAmbica.BackColor = System.Drawing.Color.White;
             this.buttonAmbica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAmbica.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonAmbica.ForeColor = System.Drawing.Color.White;
+            this.buttonAmbica.ForeColor = System.Drawing.Color.Black;
             this.buttonAmbica.Location = new System.Drawing.Point(461, 14);
             this.buttonAmbica.Name = "buttonAmbica";
             this.buttonAmbica.Size = new System.Drawing.Size(117, 43);
@@ -104,10 +104,10 @@
             // 
             // button602
             // 
-            this.button602.BackColor = System.Drawing.Color.Tomato;
+            this.button602.BackColor = System.Drawing.Color.White;
             this.button602.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button602.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button602.ForeColor = System.Drawing.Color.White;
+            this.button602.ForeColor = System.Drawing.Color.Black;
             this.button602.Location = new System.Drawing.Point(327, 14);
             this.button602.Name = "button602";
             this.button602.Size = new System.Drawing.Size(117, 43);
@@ -117,10 +117,10 @@
             // 
             // buttonCIS
             // 
-            this.buttonCIS.BackColor = System.Drawing.Color.Tomato;
+            this.buttonCIS.BackColor = System.Drawing.Color.White;
             this.buttonCIS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonCIS.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonCIS.ForeColor = System.Drawing.Color.White;
+            this.buttonCIS.ForeColor = System.Drawing.Color.Black;
             this.buttonCIS.Location = new System.Drawing.Point(192, 14);
             this.buttonCIS.Name = "buttonCIS";
             this.buttonCIS.Size = new System.Drawing.Size(117, 43);
@@ -241,18 +241,38 @@
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Exo", 15F);
+            this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 28;
+            this.listBox1.Items.AddRange(new object[] {
+            "Item1",
+            "Item2",
+            "Item3",
+            "Item4",
+            "Item5"});
             this.listBox1.Location = new System.Drawing.Point(26, 176);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(146, 121);
+            this.listBox1.Size = new System.Drawing.Size(146, 112);
             this.listBox1.TabIndex = 12;
             // 
             // listBox2
             // 
+            this.listBox2.BackColor = System.Drawing.Color.PaleGreen;
+            this.listBox2.Font = new System.Drawing.Font("Exo", 15F);
             this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 28;
+            this.listBox2.Items.AddRange(new object[] {
+            "Item1",
+            "Item2",
+            "Item3",
+            "Item4",
+            "Item5"});
             this.listBox2.Location = new System.Drawing.Point(258, 176);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(146, 121);
+            this.listBox2.Size = new System.Drawing.Size(146, 116);
             this.listBox2.TabIndex = 13;
             // 
             // button2
