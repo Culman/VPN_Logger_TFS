@@ -55,7 +55,7 @@
             this.panelmenu.Controls.Add(this.panel2);
             this.panelmenu.Controls.Add(this.panel1);
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelmenu.Location = new System.Drawing.Point(-359, 0);
+            this.panelmenu.Location = new System.Drawing.Point(-415, 0);
             this.panelmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(1674, 733);
@@ -70,10 +70,10 @@
             this.panel2.Controls.Add(this.buttonCIS);
             this.panel2.Controls.Add(this.labelvendor);
             this.panel2.Controls.Add(this.iconPictureBox1);
-            this.panel2.Location = new System.Drawing.Point(360, 120);
+            this.panel2.Location = new System.Drawing.Point(415, 120);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(621, 755);
+            this.panel2.Size = new System.Drawing.Size(586, 755);
             this.panel2.TabIndex = 2;
             // 
             // buttonAmbica
@@ -157,7 +157,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TFS_VPN_Logger.Properties.Resources.unnamed;
-            this.pictureBox1.Location = new System.Drawing.Point(351, -18);
+            this.pictureBox1.Location = new System.Drawing.Point(416, -18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(120, 156);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -194,7 +194,7 @@
             this.labelAppheading.AutoSize = true;
             this.labelAppheading.Font = new System.Drawing.Font("Exo", 26F, System.Drawing.FontStyle.Bold);
             this.labelAppheading.ForeColor = System.Drawing.Color.White;
-            this.labelAppheading.Location = new System.Drawing.Point(508, 34);
+            this.labelAppheading.Location = new System.Drawing.Point(538, 34);
             this.labelAppheading.Name = "labelAppheading";
             this.labelAppheading.Size = new System.Drawing.Size(518, 49);
             this.labelAppheading.TabIndex = 2;
@@ -206,7 +206,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1315, 733);
+            this.ClientSize = new System.Drawing.Size(1259, 733);
             this.Controls.Add(this.panelmenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
