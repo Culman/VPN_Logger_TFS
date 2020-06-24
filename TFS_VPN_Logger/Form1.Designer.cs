@@ -1,6 +1,6 @@
 ﻿namespace TFS_VPN_Logger
 {
-    partial class Form1
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelmenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonAmbica = new System.Windows.Forms.Button();
+            this.button602 = new System.Windows.Forms.Button();
+            this.buttonCIS = new System.Windows.Forms.Button();
+            this.labelvendor = new System.Windows.Forms.Label();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labeluser = new System.Windows.Forms.Label();
             this.iconuser = new FontAwesome.Sharp.IconPictureBox();
             this.labelAppheading = new System.Windows.Forms.Label();
-            this.labelvendor = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.buttonCIS = new System.Windows.Forms.Button();
-            this.button602 = new System.Windows.Forms.Button();
-            this.buttonAmbica = new System.Windows.Forms.Button();
             this.panelmenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconuser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelmenu
@@ -55,10 +55,10 @@
             this.panelmenu.Controls.Add(this.panel2);
             this.panelmenu.Controls.Add(this.panel1);
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelmenu.Location = new System.Drawing.Point(-1, 0);
+            this.panelmenu.Location = new System.Drawing.Point(-359, 0);
             this.panelmenu.Margin = new System.Windows.Forms.Padding(2);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(1116, 760);
+            this.panelmenu.Size = new System.Drawing.Size(1674, 733);
             this.panelmenu.TabIndex = 0;
             this.panelmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmenu_Paint);
             // 
@@ -70,72 +70,50 @@
             this.panel2.Controls.Add(this.buttonCIS);
             this.panel2.Controls.Add(this.labelvendor);
             this.panel2.Controls.Add(this.iconPictureBox1);
-            this.panel2.Location = new System.Drawing.Point(-11, 117);
+            this.panel2.Location = new System.Drawing.Point(360, 120);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(675, 818);
+            this.panel2.Size = new System.Drawing.Size(621, 755);
             this.panel2.TabIndex = 2;
             // 
-            // panel1
+            // buttonAmbica
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.labeluser);
-            this.panel1.Controls.Add(this.iconuser);
-            this.panel1.Controls.Add(this.labelAppheading);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1153, 117);
-            this.panel1.TabIndex = 1;
+            this.buttonAmbica.BackColor = System.Drawing.Color.Tomato;
+            this.buttonAmbica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonAmbica.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonAmbica.ForeColor = System.Drawing.Color.White;
+            this.buttonAmbica.Location = new System.Drawing.Point(461, 14);
+            this.buttonAmbica.Name = "buttonAmbica";
+            this.buttonAmbica.Size = new System.Drawing.Size(117, 43);
+            this.buttonAmbica.TabIndex = 9;
+            this.buttonAmbica.Text = "Ambica";
+            this.buttonAmbica.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // button602
             // 
-            this.pictureBox1.Image = global::TFS_VPN_Logger.Properties.Resources.unnamed;
-            this.pictureBox1.Location = new System.Drawing.Point(3, -20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 156);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.button602.BackColor = System.Drawing.Color.Tomato;
+            this.button602.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button602.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button602.ForeColor = System.Drawing.Color.White;
+            this.button602.Location = new System.Drawing.Point(327, 14);
+            this.button602.Name = "button602";
+            this.button602.Size = new System.Drawing.Size(117, 43);
+            this.button602.TabIndex = 8;
+            this.button602.Text = "SW602";
+            this.button602.UseVisualStyleBackColor = false;
             // 
-            // labeluser
+            // buttonCIS
             // 
-            this.labeluser.AutoSize = true;
-            this.labeluser.BackColor = System.Drawing.Color.Transparent;
-            this.labeluser.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
-            this.labeluser.ForeColor = System.Drawing.Color.White;
-            this.labeluser.Location = new System.Drawing.Point(795, 46);
-            this.labeluser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labeluser.Name = "labeluser";
-            this.labeluser.Size = new System.Drawing.Size(60, 28);
-            this.labeluser.TabIndex = 4;
-            this.labeluser.Text = "User:";
-            // 
-            // iconuser
-            // 
-            this.iconuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.iconuser.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconuser.IconColor = System.Drawing.Color.White;
-            this.iconuser.IconSize = 27;
-            this.iconuser.Location = new System.Drawing.Point(770, 48);
-            this.iconuser.Margin = new System.Windows.Forms.Padding(2);
-            this.iconuser.Name = "iconuser";
-            this.iconuser.Size = new System.Drawing.Size(32, 27);
-            this.iconuser.TabIndex = 3;
-            this.iconuser.TabStop = false;
-            // 
-            // labelAppheading
-            // 
-            this.labelAppheading.AutoSize = true;
-            this.labelAppheading.Font = new System.Drawing.Font("Exo", 26F, System.Drawing.FontStyle.Bold);
-            this.labelAppheading.ForeColor = System.Drawing.Color.White;
-            this.labelAppheading.Location = new System.Drawing.Point(139, 29);
-            this.labelAppheading.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelAppheading.Name = "labelAppheading";
-            this.labelAppheading.Size = new System.Drawing.Size(518, 49);
-            this.labelAppheading.TabIndex = 2;
-            this.labelAppheading.Text = "TFSCZ/SK VPN Administration";
+            this.buttonCIS.BackColor = System.Drawing.Color.Tomato;
+            this.buttonCIS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonCIS.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.buttonCIS.ForeColor = System.Drawing.Color.White;
+            this.buttonCIS.Location = new System.Drawing.Point(192, 14);
+            this.buttonCIS.Name = "buttonCIS";
+            this.buttonCIS.Size = new System.Drawing.Size(117, 43);
+            this.buttonCIS.TabIndex = 7;
+            this.buttonCIS.Text = "CIS";
+            this.buttonCIS.UseVisualStyleBackColor = false;
             // 
             // labelvendor
             // 
@@ -143,7 +121,7 @@
             this.labelvendor.BackColor = System.Drawing.Color.Transparent;
             this.labelvendor.Font = new System.Drawing.Font("Exo", 20F, System.Drawing.FontStyle.Bold);
             this.labelvendor.ForeColor = System.Drawing.Color.White;
-            this.labelvendor.Location = new System.Drawing.Point(78, 20);
+            this.labelvendor.Location = new System.Drawing.Point(65, 19);
             this.labelvendor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelvendor.Name = "labelvendor";
             this.labelvendor.Size = new System.Drawing.Size(107, 38);
@@ -156,75 +134,95 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconSize = 44;
-            this.iconPictureBox1.Location = new System.Drawing.Point(39, 22);
+            this.iconPictureBox1.Location = new System.Drawing.Point(26, 21);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(46, 44);
             this.iconPictureBox1.TabIndex = 5;
             this.iconPictureBox1.TabStop = false;
             // 
-            // buttonCIS
+            // panel1
             // 
-            this.buttonCIS.BackColor = System.Drawing.Color.Tomato;
-            this.buttonCIS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonCIS.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonCIS.ForeColor = System.Drawing.Color.White;
-            this.buttonCIS.Location = new System.Drawing.Point(205, 15);
-            this.buttonCIS.Name = "buttonCIS";
-            this.buttonCIS.Size = new System.Drawing.Size(117, 43);
-            this.buttonCIS.TabIndex = 7;
-            this.buttonCIS.Text = "CIS";
-            this.buttonCIS.UseVisualStyleBackColor = false;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.labeluser);
+            this.panel1.Controls.Add(this.iconuser);
+            this.panel1.Controls.Add(this.labelAppheading);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1730, 120);
+            this.panel1.TabIndex = 1;
             // 
-            // button602
+            // pictureBox1
             // 
-            this.button602.BackColor = System.Drawing.Color.Tomato;
-            this.button602.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button602.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button602.ForeColor = System.Drawing.Color.White;
-            this.button602.Location = new System.Drawing.Point(340, 15);
-            this.button602.Name = "button602";
-            this.button602.Size = new System.Drawing.Size(117, 43);
-            this.button602.TabIndex = 8;
-            this.button602.Text = "SW602";
-            this.button602.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = global::TFS_VPN_Logger.Properties.Resources.unnamed;
+            this.pictureBox1.Location = new System.Drawing.Point(351, -18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(120, 156);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
-            // buttonAmbica
+            // labeluser
             // 
-            this.buttonAmbica.BackColor = System.Drawing.Color.Tomato;
-            this.buttonAmbica.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.buttonAmbica.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonAmbica.ForeColor = System.Drawing.Color.White;
-            this.buttonAmbica.Location = new System.Drawing.Point(474, 15);
-            this.buttonAmbica.Name = "buttonAmbica";
-            this.buttonAmbica.Size = new System.Drawing.Size(117, 43);
-            this.buttonAmbica.TabIndex = 9;
-            this.buttonAmbica.Text = "Ambica";
-            this.buttonAmbica.UseVisualStyleBackColor = false;
+            this.labeluser.AutoSize = true;
+            this.labeluser.BackColor = System.Drawing.Color.Transparent;
+            this.labeluser.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
+            this.labeluser.ForeColor = System.Drawing.Color.White;
+            this.labeluser.Location = new System.Drawing.Point(1354, 51);
+            this.labeluser.Name = "labeluser";
+            this.labeluser.Size = new System.Drawing.Size(60, 28);
+            this.labeluser.TabIndex = 4;
+            this.labeluser.Text = "User:";
             // 
-            // Form1
+            // iconuser
+            // 
+            this.iconuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.iconuser.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconuser.IconColor = System.Drawing.Color.White;
+            this.iconuser.IconSize = 29;
+            this.iconuser.Location = new System.Drawing.Point(1331, 51);
+            this.iconuser.Margin = new System.Windows.Forms.Padding(2);
+            this.iconuser.Name = "iconuser";
+            this.iconuser.Size = new System.Drawing.Size(33, 29);
+            this.iconuser.TabIndex = 3;
+            this.iconuser.TabStop = false;
+            // 
+            // labelAppheading
+            // 
+            this.labelAppheading.AutoSize = true;
+            this.labelAppheading.Font = new System.Drawing.Font("Exo", 26F, System.Drawing.FontStyle.Bold);
+            this.labelAppheading.ForeColor = System.Drawing.Color.White;
+            this.labelAppheading.Location = new System.Drawing.Point(508, 34);
+            this.labelAppheading.Name = "labelAppheading";
+            this.labelAppheading.Size = new System.Drawing.Size(518, 49);
+            this.labelAppheading.TabIndex = 2;
+            this.labelAppheading.Text = "TFSCZ/SK VPN Administration";
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1115, 760);
+            this.ClientSize = new System.Drawing.Size(1315, 733);
             this.Controls.Add(this.panelmenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VPN Administrator by Daniel Kostelecky - ver 1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelmenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconuser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
