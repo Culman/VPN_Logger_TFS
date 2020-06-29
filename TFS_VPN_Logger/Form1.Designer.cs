@@ -30,39 +30,44 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelmenu = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.buttonAmbica = new System.Windows.Forms.Button();
             this.button602 = new System.Windows.Forms.Button();
             this.buttonCIS = new System.Windows.Forms.Button();
             this.labelvendor = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labeluser = new System.Windows.Forms.Label();
             this.iconuser = new FontAwesome.Sharp.IconPictureBox();
             this.labelAppheading = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panelmenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconuser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panelmenu
@@ -82,9 +87,40 @@
             this.panelmenu.TabIndex = 0;
             this.panelmenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelmenu_Paint);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Exo", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(1185, 620);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(358, 52);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "PROCEED";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Exo", 20F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(1124, 173);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(390, 38);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Mandatory description (why):";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.dateTimePicker2);
+            this.panel2.Controls.Add(this.textBox2);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.iconPictureBox3);
@@ -104,6 +140,133 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(641, 613);
             this.panel2.TabIndex = 2;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Blue;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Exo", 10F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(139, 499);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(150, 25);
+            this.dateTimePicker1.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Exo", 20F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(65, 427);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(305, 38);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Allowed time-frame to:";
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Clock;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox3.IconSize = 44;
+            this.iconPictureBox3.Location = new System.Drawing.Point(26, 429);
+            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(46, 44);
+            this.iconPictureBox3.TabIndex = 17;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(311, 248);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 35);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Firebrick;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(311, 307);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 35);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "-";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.Color.White;
+            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox2.Font = new System.Drawing.Font("Exo", 15F);
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 28;
+            this.listBox2.Items.AddRange(new object[] {
+            "Item1",
+            "Item2",
+            "Item3",
+            "Item4",
+            "Item5"});
+            this.listBox2.Location = new System.Drawing.Point(379, 223);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(199, 140);
+            this.listBox2.TabIndex = 13;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Font = new System.Drawing.Font("Exo", 15F);
+            this.listBox1.ForeColor = System.Drawing.Color.White;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 28;
+            this.listBox1.Items.AddRange(new object[] {
+            "Item1",
+            "Item2",
+            "Item3",
+            "Item4",
+            "Item5"});
+            this.listBox1.Location = new System.Drawing.Point(72, 223);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(211, 140);
+            this.listBox1.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Exo", 20F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(65, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(294, 38);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Users to be  unlocked:";
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ListUl;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox2.IconSize = 44;
+            this.iconPictureBox2.Location = new System.Drawing.Point(26, 162);
+            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(46, 44);
+            this.iconPictureBox2.TabIndex = 10;
+            this.iconPictureBox2.TabStop = false;
             // 
             // buttonAmbica
             // 
@@ -170,6 +333,20 @@
             this.iconPictureBox1.TabIndex = 5;
             this.iconPictureBox1.TabStop = false;
             // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.Color.LightGray;
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.DimGray;
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Clock;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.DimGray;
+            this.iconPictureBox4.IconSize = 44;
+            this.iconPictureBox4.Location = new System.Drawing.Point(1085, 175);
+            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(46, 44);
+            this.iconPictureBox4.TabIndex = 20;
+            this.iconPictureBox4.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
@@ -199,7 +376,7 @@
             this.labeluser.BackColor = System.Drawing.Color.Transparent;
             this.labeluser.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
             this.labeluser.ForeColor = System.Drawing.Color.White;
-            this.labeluser.Location = new System.Drawing.Point(1354, 51);
+            this.labeluser.Location = new System.Drawing.Point(1331, 51);
             this.labeluser.Name = "labeluser";
             this.labeluser.Size = new System.Drawing.Size(60, 28);
             this.labeluser.TabIndex = 4;
@@ -211,7 +388,7 @@
             this.iconuser.IconChar = FontAwesome.Sharp.IconChar.User;
             this.iconuser.IconColor = System.Drawing.Color.White;
             this.iconuser.IconSize = 29;
-            this.iconuser.Location = new System.Drawing.Point(1331, 51);
+            this.iconuser.Location = new System.Drawing.Point(1308, 51);
             this.iconuser.Margin = new System.Windows.Forms.Padding(2);
             this.iconuser.Name = "iconuser";
             this.iconuser.Size = new System.Drawing.Size(33, 29);
@@ -229,133 +406,6 @@
             this.labelAppheading.TabIndex = 2;
             this.labelAppheading.Text = "TFSCZ/SK VPN Administration";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Exo", 20F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(65, 160);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 38);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Users to be  unlocked:";
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.ListUl;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox2.IconSize = 44;
-            this.iconPictureBox2.Location = new System.Drawing.Point(26, 162);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(46, 44);
-            this.iconPictureBox2.TabIndex = 10;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.Font = new System.Drawing.Font("Exo", 15F);
-            this.listBox1.ForeColor = System.Drawing.Color.White;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 28;
-            this.listBox1.Items.AddRange(new object[] {
-            "Item1",
-            "Item2",
-            "Item3",
-            "Item4",
-            "Item5"});
-            this.listBox1.Location = new System.Drawing.Point(72, 223);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(211, 140);
-            this.listBox1.TabIndex = 12;
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.Color.White;
-            this.listBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox2.Font = new System.Drawing.Font("Exo", 15F);
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 28;
-            this.listBox2.Items.AddRange(new object[] {
-            "Item1",
-            "Item2",
-            "Item3",
-            "Item4",
-            "Item5"});
-            this.listBox2.Location = new System.Drawing.Point(379, 223);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(199, 140);
-            this.listBox2.TabIndex = 13;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Firebrick;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(311, 307);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 35);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(311, 248);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 35);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Exo", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(65, 427);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(305, 38);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Allowed time-frame to:";
-            // 
-            // iconPictureBox3
-            // 
-            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.Clock;
-            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox3.IconSize = 44;
-            this.iconPictureBox3.Location = new System.Drawing.Point(26, 429);
-            this.iconPictureBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox3.Name = "iconPictureBox3";
-            this.iconPictureBox3.Size = new System.Drawing.Size(46, 44);
-            this.iconPictureBox3.TabIndex = 17;
-            this.iconPictureBox3.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Maroon;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Gold;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Blue;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Exo", 15F);
-            this.dateTimePicker1.Location = new System.Drawing.Point(71, 507);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(384, 34);
-            this.dateTimePicker1.TabIndex = 19;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(1131, 233);
@@ -364,45 +414,57 @@
             this.textBox1.Size = new System.Drawing.Size(463, 292);
             this.textBox1.TabIndex = 3;
             // 
-            // label3
+            // textBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Exo", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(1124, 173);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(390, 38);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Mandatory description (why):";
+            this.textBox2.Font = new System.Drawing.Font("Exo", 10F);
+            this.textBox2.Location = new System.Drawing.Point(314, 499);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(151, 25);
+            this.textBox2.TabIndex = 20;
             // 
-            // iconPictureBox4
+            // textBox3
             // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.LightGray;
-            this.iconPictureBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.Clock;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.DimGray;
-            this.iconPictureBox4.IconSize = 44;
-            this.iconPictureBox4.Location = new System.Drawing.Point(1085, 175);
-            this.iconPictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(46, 44);
-            this.iconPictureBox4.TabIndex = 20;
-            this.iconPictureBox4.TabStop = false;
+            this.textBox3.Font = new System.Drawing.Font("Exo", 10F);
+            this.textBox3.Location = new System.Drawing.Point(314, 544);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(151, 25);
+            this.textBox3.TabIndex = 22;
             // 
-            // button3
+            // dateTimePicker2
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Exo", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1185, 620);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(358, 52);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "PROCEED";
-            this.button3.UseVisualStyleBackColor = false;
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.Blue;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Exo", 10F);
+            this.dateTimePicker2.Location = new System.Drawing.Point(139, 544);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(150, 25);
+            this.dateTimePicker2.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(71, 494);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 28);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "From:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(99, 539);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 28);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "To:";
             // 
             // FormMain
             // 
@@ -423,14 +485,14 @@
             this.panelmenu.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconuser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -462,6 +524,11 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox textBox2;
     }
 }
 
