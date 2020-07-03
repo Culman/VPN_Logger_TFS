@@ -33,6 +33,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
@@ -54,11 +59,6 @@
             this.iconuser = new FontAwesome.Sharp.IconPictureBox();
             this.labelAppheading = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panelmenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -140,6 +140,59 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(641, 613);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(99, 539);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 28);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "To:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(71, 494);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 28);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "From:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Exo", 10F);
+            this.textBox3.Location = new System.Drawing.Point(314, 544);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(151, 25);
+            this.textBox3.TabIndex = 22;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Maroon;
+            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.Gold;
+            this.dateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.Blue;
+            this.dateTimePicker2.Font = new System.Drawing.Font("Exo", 10F);
+            this.dateTimePicker2.Location = new System.Drawing.Point(139, 544);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(150, 25);
+            this.dateTimePicker2.TabIndex = 21;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Exo", 10F);
+            this.textBox2.Location = new System.Drawing.Point(314, 499);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(151, 25);
+            this.textBox2.TabIndex = 20;
             // 
             // dateTimePicker1
             // 
@@ -147,10 +200,10 @@
             this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.Color.Gold;
             this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Blue;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Exo", 10F);
+            this.dateTimePicker1.Font = new System.Drawing.Font("Exo", 6F);
             this.dateTimePicker1.Location = new System.Drawing.Point(139, 499);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(150, 25);
+            this.dateTimePicker1.Size = new System.Drawing.Size(150, 18);
             this.dateTimePicker1.TabIndex = 19;
             // 
             // label2
@@ -306,6 +359,7 @@
             this.buttonCIS.TabIndex = 7;
             this.buttonCIS.Text = "CIS";
             this.buttonCIS.UseVisualStyleBackColor = false;
+            this.buttonCIS.Click += new System.EventHandler(this.buttonCIS_Click);
             // 
             // labelvendor
             // 
@@ -413,58 +467,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(463, 292);
             this.textBox1.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Exo", 10F);
-            this.textBox2.Location = new System.Drawing.Point(314, 499);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 25);
-            this.textBox2.TabIndex = 20;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Exo", 10F);
-            this.textBox3.Location = new System.Drawing.Point(314, 544);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(151, 25);
-            this.textBox3.TabIndex = 22;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CalendarMonthBackground = System.Drawing.Color.Maroon;
-            this.dateTimePicker2.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.dateTimePicker2.CalendarTitleForeColor = System.Drawing.Color.Gold;
-            this.dateTimePicker2.CalendarTrailingForeColor = System.Drawing.Color.Blue;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Exo", 10F);
-            this.dateTimePicker2.Location = new System.Drawing.Point(139, 544);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(150, 25);
-            this.dateTimePicker2.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(71, 494);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 28);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "From:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Exo", 15F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(99, 539);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 28);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "To:";
             // 
             // FormMain
             // 

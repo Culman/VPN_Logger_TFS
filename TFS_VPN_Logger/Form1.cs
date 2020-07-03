@@ -38,5 +38,16 @@ namespace TFS_VPN_Logger
         {
             this.labeluser.Text = "User: " + GetDisplayName();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonCIS_Click(object sender, EventArgs e)
+        {
+            var ADFac = new ADFactory();
+            ADFac.FetchADUsers();
+        }
     }
 }
