@@ -284,16 +284,11 @@
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 28;
-            this.listBox1.Items.AddRange(new object[] {
-            "Item1",
-            "Item2",
-            "Item3",
-            "Item4",
-            "Item5"});
             this.listBox1.Location = new System.Drawing.Point(72, 223);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(211, 140);
             this.listBox1.TabIndex = 12;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -333,6 +328,7 @@
             this.buttonAmbica.TabIndex = 9;
             this.buttonAmbica.Text = "Ambica";
             this.buttonAmbica.UseVisualStyleBackColor = false;
+            this.buttonAmbica.Click += new System.EventHandler(this.buttonAmbica_Click);
             // 
             // button602
             // 
@@ -346,6 +342,7 @@
             this.button602.TabIndex = 8;
             this.button602.Text = "SW602";
             this.button602.UseVisualStyleBackColor = false;
+            this.button602.Click += new System.EventHandler(this.button602_Click);
             // 
             // buttonCIS
             // 

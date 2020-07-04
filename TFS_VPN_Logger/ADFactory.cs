@@ -6,28 +6,31 @@ using System.Threading.Tasks;
 using System.DirectoryServices;
 using System.DirectoryServices.AccountManagement;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace TFS_VPN_Logger
 {
-    class ADFactory
+    public class ADFactory
     {
 
-        public void FetchADUsers ()
+        private List<string> allUsers = new List<string>();
 
-        {
+        public List<string> FetchADUsers (string searchbase)
 
-            List<string> allUsers = new List<string>();
-            PrincipalContext principalContext = new PrincipalContext(ContextType.Domain, "CZ.Toyota-fs.com", "OU=CIS Users Pre-Prod,OU=Suppliers,OU=Domain Users,OU=Toyota Financial Services Europe (CZ),DC=CZ,DC=Toyota-FS,DC=com");
+        {            
+            PrincipalContext principalContext = new PrincipalContext(ContextType.Domain, "CZ.Toyota-fs.com", searchbase);
             UserPrincipal userPrincipal = new UserPrincipal(principalContext);
             PrincipalSearcher searcher = new PrincipalSearcher(userPrincipal);
 
             foreach (var item in searcher.FindAll())
             {
                 allUsers.Add(item.DisplayName);
+
+                
             }
-
-
-            var pocet = allUsers.Count;
+            return allUsers;
+            
+            
         }
 
     }

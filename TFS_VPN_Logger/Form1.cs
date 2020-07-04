@@ -9,11 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.DirectoryServices;
 using System.DirectoryServices.AccountManagement;
+using System.Configuration;
+
 
 namespace TFS_VPN_Logger
 {
     public partial class FormMain : Form
     {
+        
+
+        ADFactory ADFactory = new ADFactory();
+
         public FormMain()
         {
             InitializeComponent();
@@ -31,6 +37,7 @@ namespace TFS_VPN_Logger
             //UserPrincipal.Current.
             return user;
 
+            
         }
 
 
@@ -46,8 +53,27 @@ namespace TFS_VPN_Logger
 
         private void buttonCIS_Click(object sender, EventArgs e)
         {
-            var ADFac = new ADFactory();
-            ADFac.FetchADUsers();
+
+            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationSettings.AppSettings["cis"]);
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button602_Click(object sender, EventArgs e)
+        {
+            listBox1.DataSource = null;
+            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationSettings.AppSettings["sw602"]);
+
+        }
+
+        private void buttonAmbica_Click(object sender, EventArgs e)
+        {
+    
+            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationSettings.AppSettings["sw602"]);
+        }
+
     }
 }
