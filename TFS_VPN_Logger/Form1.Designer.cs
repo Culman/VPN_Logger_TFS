@@ -244,6 +244,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -265,12 +266,6 @@
             this.listBox2.Font = new System.Drawing.Font("Exo", 15F);
             this.listBox2.FormattingEnabled = true;
             this.listBox2.ItemHeight = 28;
-            this.listBox2.Items.AddRange(new object[] {
-            "Item1",
-            "Item2",
-            "Item3",
-            "Item4",
-            "Item5"});
             this.listBox2.Location = new System.Drawing.Point(379, 223);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(199, 140);

@@ -20,9 +20,13 @@ namespace TFS_VPN_Logger
 
         ADFactory ADFactory = new ADFactory();
 
+        private List<string> targetlist = new List<string>();
+
         public FormMain()
         {
             InitializeComponent();
+            
+
         }
 
         private void panelmenu_Paint(object sender, PaintEventArgs e)
@@ -32,9 +36,8 @@ namespace TFS_VPN_Logger
 
         public static String GetDisplayName()
         {
-            var test = UserPrincipal.Current;
+            
             String user = UserPrincipal.Current.DisplayName.ToString();
-            //UserPrincipal.Current.
             return user;
 
             
@@ -54,7 +57,7 @@ namespace TFS_VPN_Logger
         private void buttonCIS_Click(object sender, EventArgs e)
         {
 
-            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationSettings.AppSettings["cis"]);
+            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationManager.AppSettings["cis"]);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,16 +67,29 @@ namespace TFS_VPN_Logger
 
         private void button602_Click(object sender, EventArgs e)
         {
-            listBox1.DataSource = null;
-            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationSettings.AppSettings["sw602"]);
+            
+            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationManager.AppSettings["sw602"]);
 
         }
 
         private void buttonAmbica_Click(object sender, EventArgs e)
         {
     
-            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationSettings.AppSettings["sw602"]);
+            listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationManager.AppSettings["ambica"]);
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem == null) return; 
+            listBox2.DataSource = null;
+            var selectedTtem = listBox1.SelectedItem.ToString();
+            if (!targetlist.Contains(selectedTtem))
+            {
+                targetlist.Add(selectedTtem);
+            }
+           
+            listBox2.DataSource = targetlist;
+
+        }
     }
 }

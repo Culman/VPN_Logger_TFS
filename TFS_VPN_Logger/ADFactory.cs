@@ -13,11 +13,12 @@ namespace TFS_VPN_Logger
     public class ADFactory
     {
 
-        private List<string> allUsers = new List<string>();
+        
 
         public List<string> FetchADUsers (string searchbase)
 
-        {            
+        {   
+            List<string> allUsers = new List<string>();
             PrincipalContext principalContext = new PrincipalContext(ContextType.Domain, "CZ.Toyota-fs.com", searchbase);
             UserPrincipal userPrincipal = new UserPrincipal(principalContext);
             PrincipalSearcher searcher = new PrincipalSearcher(userPrincipal);
