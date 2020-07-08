@@ -91,5 +91,25 @@ namespace TFS_VPN_Logger
             listBox2.DataSource = targetlist;
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedItem == null) return;
+            var selectedTtem = listBox2.SelectedItem.ToString();
+            targetlist.Remove(selectedTtem);
+            listBox2.DataSource = null;
+            listBox2.DataSource = targetlist;
+
+        }
+
+        private void buttontest_Click(object sender, EventArgs e)
+        {
+            PrincipalContext principalCon = new PrincipalContext(ContextType.Domain, "CZ.Toyota-fs.com");
+            UserPrincipal userPrinci = UserPrincipal.FindByIdentity(principalCon, IdentityType.SamAccountName, "CIS.PP.LB");
+            userPrinci.Enabled = false;
+            userPrinci.Description = "test pico";
+            
+
+        }
     }
 }

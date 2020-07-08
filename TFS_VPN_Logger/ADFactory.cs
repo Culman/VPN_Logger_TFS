@@ -22,14 +22,12 @@ namespace TFS_VPN_Logger
             PrincipalContext principalContext = new PrincipalContext(ContextType.Domain, "CZ.Toyota-fs.com", searchbase);
             UserPrincipal userPrincipal = new UserPrincipal(principalContext);
             PrincipalSearcher searcher = new PrincipalSearcher(userPrincipal);
-
             foreach (var item in searcher.FindAll())
             {
-                allUsers.Add(item.DisplayName);
-
-                
+                allUsers.Add(item.Name);                      
             }
             return allUsers;
+
             
             
         }

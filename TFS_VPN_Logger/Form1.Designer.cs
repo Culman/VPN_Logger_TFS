@@ -59,6 +59,7 @@
             this.iconuser = new FontAwesome.Sharp.IconPictureBox();
             this.labelAppheading = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttontest = new System.Windows.Forms.Button();
             this.panelmenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
@@ -116,6 +117,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.panel2.Controls.Add(this.buttontest);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBox3);
@@ -258,6 +260,7 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "-";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox2
             // 
@@ -335,7 +338,7 @@
             this.button602.Name = "button602";
             this.button602.Size = new System.Drawing.Size(117, 43);
             this.button602.TabIndex = 8;
-            this.button602.Text = "SW602";
+            this.button602.Text = "S602";
             this.button602.UseVisualStyleBackColor = false;
             this.button602.Click += new System.EventHandler(this.button602_Click);
             // 
@@ -460,6 +463,16 @@
             this.textBox1.Size = new System.Drawing.Size(463, 292);
             this.textBox1.TabIndex = 3;
             // 
+            // buttontest
+            // 
+            this.buttontest.Location = new System.Drawing.Point(542, 442);
+            this.buttontest.Name = "buttontest";
+            this.buttontest.Size = new System.Drawing.Size(75, 23);
+            this.buttontest.TabIndex = 22;
+            this.buttontest.Text = "button4";
+            this.buttontest.UseVisualStyleBackColor = true;
+            this.buttontest.Click += new System.EventHandler(this.buttontest_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,6 +536,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button buttontest;
     }
 }
 
