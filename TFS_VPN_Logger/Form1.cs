@@ -108,7 +108,7 @@ namespace TFS_VPN_Logger
             UserPrincipal userPrinci = UserPrincipal.FindByIdentity(principalCon, IdentityType.SamAccountName, "CIS.PP.LB");
             userPrinci.Enabled = false;
             userPrinci.Description = "test pico";
-            
+            userPrinci.Save();
 
         }
     }
