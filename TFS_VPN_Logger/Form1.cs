@@ -11,6 +11,7 @@ using System.DirectoryServices;
 using System.DirectoryServices.AccountManagement;
 using System.Configuration;
 using System.Collections;
+using System.Xml.Linq;
 
 namespace TFS_VPN_Logger
 {
@@ -20,6 +21,7 @@ namespace TFS_VPN_Logger
 
         ADFactory ADFactory = new ADFactory();
         private ArrayList targetArrayList = new ArrayList();
+        bool isProd;
 
         public FormMain()
         {
@@ -28,8 +30,9 @@ namespace TFS_VPN_Logger
             dateTimePicker1.CustomFormat = "dd.MM.yyyy HH:mm";
             dateTimePicker2.Format = DateTimePickerFormat.Custom;
             dateTimePicker2.CustomFormat = "dd.MM.yyyy HH:mm";
-
-
+            dateTimePicker1.MinDate = DateTime.Now;
+            dateTimePicker2.MinDate = DateTime.Now;
+            isProd = true;
         }
 
         private void panelmenu_Paint(object sender, PaintEventArgs e)
@@ -62,9 +65,21 @@ namespace TFS_VPN_Logger
 
             /*listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationManager.AppSettings["cis"]);*/
 
-            listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["cis"]);
-            listBox1.DisplayMember = "Name";
-            listBox1.ValueMember = "SID";
+            if (isProd==true)
+            {
+                listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["cisprod"]);
+                listBox1.DisplayMember = "Name";
+                listBox1.ValueMember = "SID";
+            }
+
+            else
+            {
+                listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["cis"]);
+                listBox1.DisplayMember = "Name";
+                listBox1.ValueMember = "SID";
+
+            }
+
 
         }
 
@@ -74,20 +89,42 @@ namespace TFS_VPN_Logger
         }
 
         private void button602_Click(object sender, EventArgs e)
-        {       
+        {
+            if (isProd==true)
+            {
+                listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["sw602prod"]);
+                listBox1.DisplayMember = "Name";
+                listBox1.ValueMember = "SID";
 
-            listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["sw602"]);
-            listBox1.DisplayMember = "Name";
-            listBox1.ValueMember = "SID";
+            }
+
+            else
+            {
+                listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["sw602"]);
+                listBox1.DisplayMember = "Name";
+                listBox1.ValueMember = "SID";
+            }
+
 
 
         }
 
         private void buttonAmbica_Click(object sender, EventArgs e)
         {
-            listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["ambica"]);
-            listBox1.DisplayMember = "Name";
-            listBox1.ValueMember = "SID";
+            if (isProd==true)
+            {
+                listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["ambicaprod"]);
+                listBox1.DisplayMember = "Name";
+                listBox1.ValueMember = "SID";
+            }
+            else
+            {
+                listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["ambica"]);
+                listBox1.DisplayMember = "Name";
+                listBox1.ValueMember = "SID";
+            }
+
+
 
         }
 
@@ -132,6 +169,29 @@ namespace TFS_VPN_Logger
             userPrinci.Enabled = false;
             userPrinci.Description = "Láda Baran";
             userPrinci.Save();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //TODO: zvalidovat vsechny vstupy pred vytvorenim xml atd...
+            if (listBox2.Items == null || listBox2.Items.Count == 0) return;
+            if (textBox1.Text=="") 
+            { MessageBox.Show("Description must have a value", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+
+
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            isProd = true;
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            isProd = false;
+
         }
     }
 }
