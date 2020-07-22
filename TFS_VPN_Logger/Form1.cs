@@ -12,6 +12,7 @@ using System.DirectoryServices.AccountManagement;
 using System.Configuration;
 using System.Collections;
 using System.Xml.Linq;
+using System.Xml;
 
 namespace TFS_VPN_Logger
 {
@@ -22,7 +23,7 @@ namespace TFS_VPN_Logger
         ADFactory ADFactory = new ADFactory();
         private ArrayList targetArrayList = new ArrayList();
         bool isProd;
-
+        string env;
         public FormMain()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace TFS_VPN_Logger
             dateTimePicker1.MinDate = DateTime.Now;
             dateTimePicker2.MinDate = DateTime.Now;
             isProd = true;
+            env = "PROD";
         }
 
         private void panelmenu_Paint(object sender, PaintEventArgs e)
@@ -185,13 +187,41 @@ namespace TFS_VPN_Logger
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             isProd = true;
-
+             env = "PROD";
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             isProd = false;
+            env = "TEST";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+         
+
+            XDocument document = new XDocument(
+                new XElement("Input",
+                    new XElement("Users"), new XElement("From", Timeconverter(dateTimePicker1.Value)), new XElement("To", Timeconverter(dateTimePicker2.Value)), new XElement("SubmitedBy", GetDisplayName()), new XElement("Environment",env), new XElement("RequestorID", textBox2.Text), new XElement("ReasonText")
+                    )
+                ) ;
+
+            textBox1.Text = document.ToString();
+        }
+
+
+        public DateTime Timeconverter (DateTime inputdatetime)
+        {
+            inputdatetime.ToFileTime();
+            return inputdatetime;
+
 
         }
+
+
+
+
+
+
     }
 }
