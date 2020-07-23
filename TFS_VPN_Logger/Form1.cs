@@ -13,6 +13,7 @@ using System.Configuration;
 using System.Collections;
 using System.Xml.Linq;
 using System.Xml;
+using System.Xml.XPath;
 
 namespace TFS_VPN_Logger
 {
@@ -24,6 +25,8 @@ namespace TFS_VPN_Logger
         private ArrayList targetArrayList = new ArrayList();
         bool isProd;
         string env;
+        private int vendorid;
+
         public FormMain()
         {
             InitializeComponent();
@@ -66,7 +69,7 @@ namespace TFS_VPN_Logger
         {
 
             /*listBox1.DataSource = ADFactory.FetchADUsers(ConfigurationManager.AppSettings["cis"]);*/
-
+            vendorid = 1;
             if (isProd==true)
             {
                 listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["cisprod"]);
@@ -92,6 +95,7 @@ namespace TFS_VPN_Logger
 
         private void button602_Click(object sender, EventArgs e)
         {
+            vendorid = 2;
             if (isProd==true)
             {
                 listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["sw602prod"]);
@@ -113,6 +117,7 @@ namespace TFS_VPN_Logger
 
         private void buttonAmbica_Click(object sender, EventArgs e)
         {
+            vendorid = 3;
             if (isProd==true)
             {
                 listBox1.DataSource = ADFactory.Users(ConfigurationManager.AppSettings["ambicaprod"]);
@@ -180,6 +185,29 @@ namespace TFS_VPN_Logger
             if (textBox1.Text=="") 
             { MessageBox.Show("Description must have a value", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
+            XElement users = new XElement("Users");
+            foreach (ADUser userInC in listBox2.Items)
+            {
+                users.Add(new XElement("User", new XAttribute("Name", userInC.Name), new XAttribute("SID", userInC.SID), new XAttribute("Vendor", vendorid)
+                    ));
+            }
+            XDocument documentpre = new XDocument(
+                new XElement("Input",
+                users,
+                new XElement("From", TimeConverter(dateTimePicker1.Value)),
+                new XElement("To", TimeConverter(dateTimePicker2.Value)),
+                new XElement("SubmitedBy", GetDisplayName()),
+                new XElement("Environment", env),
+                new XElement("RequestorID", textBox2.Text),
+                new XElement("ReasonText")
+                )
+            );
+
+
+
+            textBox1.Text = documentpre.ToString();
+
+
 
 
         }
@@ -196,24 +224,11 @@ namespace TFS_VPN_Logger
             env = "TEST";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+
+        public DateTime TimeConverter (DateTime inputDatetime)
         {
-         
-
-            XDocument document = new XDocument(
-                new XElement("Input",
-                    new XElement("Users"), new XElement("From", Timeconverter(dateTimePicker1.Value)), new XElement("To", Timeconverter(dateTimePicker2.Value)), new XElement("SubmitedBy", GetDisplayName()), new XElement("Environment",env), new XElement("RequestorID", textBox2.Text), new XElement("ReasonText")
-                    )
-                ) ;
-
-            textBox1.Text = document.ToString();
-        }
-
-
-        public DateTime Timeconverter (DateTime inputdatetime)
-        {
-            inputdatetime.ToFileTime();
-            return inputdatetime;
+             
+            return inputDatetime.AddMinutes(3);
 
 
         }

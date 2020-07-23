@@ -64,7 +64,6 @@
             this.iconuser = new FontAwesome.Sharp.IconPictureBox();
             this.labelAppheading = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.panelmenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
             this.panel2.SuspendLayout();
@@ -165,7 +164,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.radioButton2);
             this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.label6);
@@ -556,16 +554,6 @@
             this.textBox1.Size = new System.Drawing.Size(534, 292);
             this.textBox1.TabIndex = 3;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(421, 564);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(202, 68);
-            this.button4.TabIndex = 29;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -636,7 +624,6 @@
         private System.Windows.Forms.Label label7;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
     }
 }
 
