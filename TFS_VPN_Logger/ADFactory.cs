@@ -20,7 +20,7 @@ namespace TFS_VPN_Logger
 
         {   
             List<string> allUsers = new List<string>();
-            PrincipalContext principalContext = new PrincipalContext(ContextType.Domain, "CZ.Toyota-fs.com", searchbase);
+            PrincipalContext principalContexty = new PrincipalContext(ContextType.Domain, "CZ.Toyota-fs.com", searchbase);
             UserPrincipal userPrincipal = new UserPrincipal(principalContext);
             PrincipalSearcher searcher = new PrincipalSearcher(userPrincipal);
             foreach (var item in searcher.FindAll())

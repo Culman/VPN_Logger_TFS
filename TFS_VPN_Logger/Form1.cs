@@ -182,16 +182,25 @@ namespace TFS_VPN_Logger
         {
             //TODO: zvalidovat vsechny vstupy pred vytvorenim xml atd...
             if (listBox2.Items == null || listBox2.Items.Count == 0) return;
-            if (textBox1.Text=="") 
-            { MessageBox.Show("Description must have a value", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            if (textBox1.Text=="" || textBox2.Text=="") 
+            { MessageBox.Show("Description or Requestor Link must have a value", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (dateTimePicker1.Value > dateTimePicker2.Value)
+            {
+                { MessageBox.Show("Time-frame is incorrect, value of 'To' needs to be in the future against value of 'From'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                return;
+            }
+
 
             XElement users = new XElement("Users");
-            foreach (ADUser userInC in listBox2.Items)
+            foreach (ADUser user in listBox2.Items)
             {
-                users.Add(new XElement("User", new XAttribute("Name", userInC.Name), new XAttribute("SID", userInC.SID), new XAttribute("Vendor", vendorid)
+                users.Add(new XElement("User", new XAttribute("Name", user.Name), new XAttribute("SID", user.SID), new XAttribute("Vendor", vendorid)
                     ));
             }
-            XDocument documentpre = new XDocument(
+            XDocument xmldoc = new XDocument(
                 new XElement("Input",
                 users,
                 new XElement("From", TimeConverter(dateTimePicker1.Value)),
@@ -199,15 +208,20 @@ namespace TFS_VPN_Logger
                 new XElement("SubmitedBy", GetDisplayName()),
                 new XElement("Environment", env),
                 new XElement("RequestorID", textBox2.Text),
-                new XElement("ReasonText")
+                new XElement("ReasonText",textBox1.Text)
                 )
-            );
+                );
+
+            var SQL = new SQLFactory();
 
 
+            SQL.WriteToDB(xmldoc.ToString());
 
-            textBox1.Text = documentpre.ToString();
 
+            textBox1.Text = xmldoc.ToString();
 
+            Application.Restart();
+            Environment.Exit(0);
 
 
         }
