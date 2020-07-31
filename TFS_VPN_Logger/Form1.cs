@@ -172,7 +172,7 @@ namespace TFS_VPN_Logger
         {
 
             PrincipalContext principalCon = new PrincipalContext(ContextType.Domain, "CZ.Toyota-fs.com");
-            UserPrincipal userPrinci = UserPrincipal.FindByIdentity(principalCon, IdentityType.SamAccountName, "CIS.PP.LB");
+            UserPrincipal userPrinci = UserPrincipal.FindByIdentity(principalCon, IdentityType.Sid, "CIS.PP.LB");
             userPrinci.Enabled = false;
             userPrinci.Description = "Láda Baran";
             userPrinci.Save();
@@ -216,10 +216,7 @@ namespace TFS_VPN_Logger
 
 
             SQL.WriteToDB(xmldoc.ToString());
-
-
-            textBox1.Text = xmldoc.ToString();
-
+            MessageBox.Show("The request has been successfully created", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Application.Restart();
             Environment.Exit(0);
 
@@ -241,10 +238,9 @@ namespace TFS_VPN_Logger
 
         public DateTime TimeConverter (DateTime inputDatetime)
         {
+
+            return DateTime.SpecifyKind(inputDatetime.AddMinutes(3), DateTimeKind.Local);
              
-            return inputDatetime.AddMinutes(3);
-
-
         }
 
 
